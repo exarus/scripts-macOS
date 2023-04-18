@@ -1,6 +1,6 @@
 #!/bin/zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-(echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/exarus/.zprofile
+(echo; echo 'eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"') >> "$HOME/.zprofile"
 eval "$(/usr/local/bin/brew shellenv)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 xcode-select --install
