@@ -41,6 +41,7 @@ chown -R ${USER}:staff ~/Projects
 - Disable `Keyboard` -> `Keyboard Shortcuts...` -> `Services` -> `Text`
 - Enable `Keyboard` -> `Text Input` -> `Input Sources` -> `Edit...` -> `All Input Sources` -> `Use the Caps Lock key to switch to and from ABC`
 - Change `Keyboard` -> `Touch Bar Settings...` -> `Customise Control Strip...` from `Siri` to `Input Sources`
+- Set `Language & Region` -> `Number format` -> `1 234 567.89`
 
 ## Google Chrome
 - Set as default browser
