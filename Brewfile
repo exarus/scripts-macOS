@@ -50,19 +50,6 @@ cask 'webstorm'
 # cask 'MonitorControl'
 # cask 'homebrew/cask-drivers/logitech-g-hub' # 100% CPU usage on Intel Macs
 
-# Work
-cask 'slack'
-cask 'linear-linear'
-brew 'pkg-config'
-brew 'cairo'
-brew 'pango'
-brew 'libpng'
-brew 'jpeg'
-brew 'giflib'
-brew 'librsvg'
-brew 'pixman'
-
-#mas 'Balance Lock', id: 1019371109
 mas 'Bitwarden', id: 1352778147
 mas 'Unsplash Wallpapers', id: 1284863847
 mas 'MEGA VPN', id: 6456784858
