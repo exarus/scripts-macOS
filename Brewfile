@@ -22,12 +22,11 @@ brew 'jorgelbg/tap/pinentry-touchid'
 
 cask 'android-file-transfer'
 cask 'amazon-q'
-cask 'anydesk'
+cask 'anydesk' # crypto
 cask 'arc'
 cask 'battle-net'
 cask 'chatgpt'
 cask 'calibre'
-cask 'clickup' # work
 cask 'discord'
 cask 'docker'
 cask 'figma'
@@ -39,12 +38,14 @@ cask 'iterm2'
 cask 'keka'
 #cask 'kekaexternalhelper'
 cask 'megasync'
+cask 'microsoft-teams' # work
 cask 'obs'
 cask 'obsidian'
 cask 'qbittorrent'
 cask 'raycast'
 cask 'readdle-spark'
-cask 'slack'
+cask 'rustdesk' # work
+cask 'slack' # work
 cask 'steam'
 cask 'telegram'
 cask 'ticktick'
