@@ -41,6 +41,8 @@ cask 'megasync'
 cask 'microsoft-teams' # work
 cask 'obs'
 cask 'obsidian'
+cask 'postman' #work
+cask 'pritunl' #work
 cask 'qbittorrent'
 cask 'raycast'
 cask 'readdle-spark'
