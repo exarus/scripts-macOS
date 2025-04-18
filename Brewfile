@@ -6,6 +6,7 @@ brew 'fnm'
 brew 'gh'
 brew 'helix'
 brew 'pnpm'
+brew 'pyenv' # work
 brew 'ripgrep'
 brew 'starship'
 brew 'yt-dlp'
