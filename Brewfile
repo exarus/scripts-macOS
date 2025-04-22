@@ -5,6 +5,7 @@ brew 'eza'
 brew 'fnm'
 brew 'gh'
 brew 'helix'
+brew 'kubernetes-cli' # work
 brew 'pnpm'
 brew 'pyenv' # work
 brew 'ripgrep'
