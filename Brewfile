@@ -37,10 +37,12 @@ cask 'font-jetbrains-mono-nerd-font'
 cask 'google-chrome'
 cask 'handbrake'
 cask 'iterm2'
+cask 'jordanbaird-ice'
 cask 'keka'
 #cask 'kekaexternalhelper'
 cask 'megasync'
 cask 'microsoft-teams' # work
+cask 'monitorcontrol'
 cask 'obs'
 cask 'obsidian'
 cask 'postman' #work
