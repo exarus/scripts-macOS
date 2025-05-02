@@ -23,6 +23,7 @@ brew 'pinentry-mac'
 brew 'jorgelbg/tap/pinentry-touchid'
 
 cask 'android-file-transfer'
+cask 'android-platform-tools'
 cask 'amazon-q'
 cask 'anydesk' # crypto
 cask 'arc'
@@ -40,6 +41,7 @@ cask 'iterm2'
 cask 'jordanbaird-ice'
 cask 'keka'
 #cask 'kekaexternalhelper'
+cask 'kindle-previewer'
 cask 'megasync'
 cask 'microsoft-teams' # work
 cask 'monitorcontrol'
