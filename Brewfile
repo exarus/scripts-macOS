@@ -30,6 +30,7 @@ cask 'arc'
 cask 'battle-net'
 cask 'chatgpt'
 cask 'calibre'
+cask 'chromium' # work
 cask 'discord'
 cask 'docker'
 cask 'figma'
