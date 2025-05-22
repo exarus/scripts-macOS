@@ -21,6 +21,7 @@ chown -R ${USER}:staff ~/Projects
 - Ask Siri: disable
 
 ## System Settings
+- Disable `Desktop & Dock` -> `Windows` -> `Close windows when quitting an application`
 - Set `Battery` -> `Options...` -> `Enable Power Nap` to `Never`
 - Disable `Notifications` -> `Allow notifications when the display is sleeping`
 - Disable `Notifications` -> `Allow notifications when the screen is locked`
