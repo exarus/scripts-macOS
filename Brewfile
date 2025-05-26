@@ -42,19 +42,20 @@ cask 'iterm2'
 cask 'jetbrains-toolbox' # cli launch of IDE works this way
 cask 'jordanbaird-ice'
 cask 'keka'
-#cask 'kekaexternalhelper'
 cask 'kindle-previewer'
 cask 'megasync'
 cask 'microsoft-teams' # work
 cask 'monitorcontrol'
+cask 'grishka/grishka/neardrop'
 cask 'obs'
 cask 'obsidian'
 cask 'postman' #work
 cask 'pritunl' #work
 cask 'qbittorrent'
+cask 'parsec' # work
 cask 'raycast'
 cask 'readdle-spark'
-cask 'rustdesk' # work
+cask 'rustdesk' # work, probably parsec is better alternative
 cask 'slack' # work
 cask 'steam'
 cask 'telegram'
@@ -62,10 +63,9 @@ cask 'ticktick'
 cask 'tradingview'
 cask 'vlc'
 # cask 'balenaetcher'
-# cask 'crossover'
-# cask 'MonitorControl'
-# cask 'homebrew/cask-drivers/logitech-g-hub' # 100% CPU usage on Intel Macs
-cask 'grishka/grishka/neardrop'
+# cask 'crossover' # games
+# cask 'kekaexternalhelper' # single-use utility
+# cask 'homebrew/cask-drivers/logitech-g-hub' # games, 100% CPU issue on Intel Macs
 
 mas 'Bitwarden', id: 1352778147
 mas 'SBC', id: 6642675514
