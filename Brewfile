@@ -27,7 +27,8 @@ cask 'android-platform-tools'
 cask 'amazon-q'
 cask 'anydesk' # crypto
 cask 'arc'
-cask 'battle-net'
+cask 'battle-net' # gaming
+cask 'bluestacks' # gaming
 cask 'chatgpt'
 cask 'calibre'
 cask 'chromium' # work
@@ -49,21 +50,21 @@ cask 'monitorcontrol'
 cask 'grishka/grishka/neardrop'
 cask 'obs'
 cask 'obsidian'
-cask 'postman' #work
-cask 'pritunl' #work
+cask 'postman' # work
+cask 'pritunl' # work
 cask 'qbittorrent'
 cask 'parsec' # work
 cask 'raycast'
 cask 'readdle-spark'
 cask 'rustdesk' # work, probably parsec is better alternative
 cask 'slack' # work
-cask 'steam'
+cask 'steam' # gaming
 cask 'telegram'
 cask 'ticktick'
 cask 'tradingview'
 cask 'vlc'
 # cask 'balenaetcher'
-# cask 'crossover' # games
+# cask 'crossover' # gaming
 # cask 'kekaexternalhelper' # single-use utility
 # cask 'homebrew/cask-drivers/logitech-g-hub' # games, 100% CPU issue on Intel Macs
 
