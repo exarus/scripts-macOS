@@ -6,6 +6,7 @@ brew 'fnm'
 brew 'gh'
 brew 'helix'
 brew 'kubernetes-cli' # work
+brew 'magic-wormhole'
 brew 'pnpm'
 brew 'pyenv' # work
 brew 'ripgrep'
@@ -59,6 +60,7 @@ cask 'readdle-spark'
 cask 'rustdesk' # work, probably parsec is better alternative
 cask 'slack' # work
 cask 'steam' # gaming
+cask 'superwhisper'
 cask 'telegram'
 cask 'ticktick'
 cask 'tradingview'
