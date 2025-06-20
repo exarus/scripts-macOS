@@ -21,18 +21,22 @@ chown -R ${USER}:staff ~/Projects
 - Ask Siri: disable
 
 ## System Settings
+- Enable `General` -> `Software Update` -> `Automatic updates` -> `ⓘ` -> `Install macOS updates`
+- Enable `General` -> `Software Update` -> `Automatic updates` -> `ⓘ` -> `Install application updates from the App Store`
+- Set `General` -> `Language & Region` -> `Number format` to `1,234,567.89`
+- Set `General` -> `Language & Region` -> `Number format` -> `1 234 567.89`
+- Disable `Desktop & Dock` -> `Windows & Apps` -> `Close windows when quitting an application` (for `iTerm`)
+- Set `Desktop & Dock` -> `Hot Corners...` -> `Right Bottom` to `-`
 - Disable `Desktop & Dock` -> `Windows` -> `Close windows when quitting an application`
 - Set `Battery` -> `Options...` -> `Enable Power Nap` to `Never`
 - Disable `Notifications` -> `Allow notifications when the display is sleeping`
 - Disable `Notifications` -> `Allow notifications when the screen is locked`
 - Press `Option+Command+D`
-- Enable `General` -> `Software Update` -> `Automatic updates` -> `ⓘ` -> `Install macOS updates`
-- Enable `General` -> `Software Update` -> `Automatic updates` -> `ⓘ` -> `Install application updates from the App Store`
 - Enable `Storage` -> `Empty Bin automatically`
-- Set `Control Centre` -> `Menu Bar Only` -> `Spotlight` to `Don't Show in Menu Bar`
-- Disable `Desktop & Dock` -> `Windows & Apps` -> `Close windows when quitting an application` (for `iTerm`)
-- Set `Desktop & Dock` -> `Hot Corners...` -> `Right Bottom` to `-`
-- Set `General` -> `Language & Region` -> `Number format` to `1,234,567.89`
+- Set `Control Center` -> `Menu Bar Only` -> `Spotlight` to `Don't Show in Menu Bar`
+- Set `Control Center` -> `Menu Bar Only` -> `Siri` to `Don't Show in Menu Bar`
+- Enable `Control Center` -> `Other Modules` -> `Music Recognition` -> `Show in Menu Bar`
+- Enable `Control Center` -> `Other Modules` -> `Music Recognition` -> `Show in Control Center`
 - Set `Trackpad` -> `More Gestures` -> `App Exposé` to `Swipe Down with Three Fingers`
 - Disable `Keyboard` -> `Keyboard Shortcuts...` -> `Spotlight` -> `Show Spolight Search`
 - Disable `Keyboard` -> `Keyboard Shortcuts...` -> `Spotlight` -> `Show Finder search window`
@@ -42,7 +46,6 @@ chown -R ${USER}:staff ~/Projects
 - Disable `Keyboard` -> `Keyboard Shortcuts...` -> `Services` -> `Text`
 - Enable `Keyboard` -> `Text Input` -> `Input Sources` -> `Edit...` -> `All Input Sources` -> `Use the Caps Lock key to switch to and from ABC`
 - Change `Keyboard` -> `Touch Bar Settings...` -> `Customise Control Strip...` from `Siri` to `Input Sources`
-- Set `Language & Region` -> `Number format` -> `1 234 567.89`
 
 ## Google Chrome
 - Set as default browser
