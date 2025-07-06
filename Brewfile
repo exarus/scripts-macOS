@@ -70,7 +70,7 @@ cask 'vlc'
 # cask 'homebrew/cask-drivers/logitech-g-hub' # games, 100% CPU issue on Intel Macs
 
 mas 'Bitwarden', id: 1352778147
-mas 'SBC', id: 6642675514
 mas 'Unsplash Wallpapers', id: 1284863847
 mas 'MEGA VPN', id: 6456784858
 mas 'Windows App', id: 1295203466
+# mas 'SBC', id: 6642675514
