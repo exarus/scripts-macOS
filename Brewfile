@@ -57,7 +57,6 @@ cask 'qbittorrent'
 cask 'parsec' # work
 cask 'raycast'
 cask 'readdle-spark'
-cask 'rustdesk' # work, probably parsec is better alternative
 cask 'slack' # work
 cask 'steam' # gaming
 cask 'superwhisper'
