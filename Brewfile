@@ -53,6 +53,7 @@ cask 'obs'
 cask 'obsidian'
 cask 'postman' # work
 cask 'pritunl' # work
+cask 'rustdesk' # work
 cask 'qbittorrent'
 cask 'parsec' # work
 cask 'raycast'
