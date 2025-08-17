@@ -47,6 +47,7 @@ cask 'keka'
 cask 'kindle-previewer'
 cask 'megasync'
 cask 'microsoft-teams' # work
+cask 'microsoft-outlook' # work
 cask 'monitorcontrol'
 cask 'grishka/grishka/neardrop'
 cask 'obs'
@@ -63,7 +64,7 @@ cask 'steam' # gaming
 cask 'superwhisper'
 cask 'telegram'
 cask 'ticktick'
-cask 'tradingview'
+cask 'tradingview' # crypto
 cask 'vlc'
 # cask 'balenaetcher'
 # cask 'crossover' # gaming
