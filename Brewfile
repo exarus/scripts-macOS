@@ -45,6 +45,7 @@ cask 'jetbrains-toolbox' # cli launch of IDE works this way
 cask 'jordanbaird-ice'
 cask 'keka'
 cask 'kindle-previewer'
+cask 'losslesscut'
 cask 'megasync'
 cask 'microsoft-teams' # work
 cask 'microsoft-outlook' # work
@@ -73,6 +74,7 @@ cask 'vlc'
 
 mas 'Bitwarden', id: 1352778147
 mas 'Unsplash Wallpapers', id: 1284863847
+mas 'Perplexity: Ask Anything', id: id6714467650
 mas 'MEGA VPN', id: 6456784858
 mas 'Windows App', id: 1295203466
 # mas 'SBC', id: 6642675514
