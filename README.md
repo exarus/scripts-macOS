@@ -1,7 +1,6 @@
 # Transfer
 * `~/.ssh`
 * `~/Projects`
-* Import Jetbrains IDE settings
 * Import Raycast settings
 * Import GPG Key
 
@@ -14,16 +13,9 @@ chown -R ${USER}:staff ~/Projects
 # Run `init.zsh` interactively
 
 # Customize
-## macOS Installation
-- Theme: Dark
-- File Vault: enable, disable iCloud recovery
-- Location: enable
-- Ask Siri: disable
 
 ## System Settings
-- Enable `General` -> `Software Update` -> `Automatic updates` -> `ⓘ` -> `Install macOS updates`
-- Enable `General` -> `Software Update` -> `Automatic updates` -> `ⓘ` -> `Install application updates from the App Store`
-- Set `General` -> `Language & Region` -> `Number format` to `1,234,567.89`
+- Set `General` -> `Language & Region` -> `First day of week` to `Monday`
 - Set `General` -> `Language & Region` -> `Number format` -> `1 234 567.89`
 - Disable `Desktop & Dock` -> `Windows & Apps` -> `Close windows when quitting an application` (for `iTerm`)
 - Set `Desktop & Dock` -> `Hot Corners...` -> `Right Bottom` to `-`
