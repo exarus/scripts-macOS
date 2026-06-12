@@ -63,3 +63,42 @@ chown -R ${USER}:staff ~/Projects
 ## Steam
 
 * Disable `Preferences -> Interface -> Run Steam when my computer starts`
+
+
+# Possibly interesting additions to Brewfile
+
+```shell
+brew 'fd'
+brew 'fx'
+brew 'kubernetes-cli'
+brew 'magic-wormhole'
+brew 'pyenv'
+brew 'rsync'
+
+cask 'android-platform-tools'
+cask 'anydesk'
+cask 'balenaetcher'
+cask 'bluestacks' # gaming
+cask 'background-music'
+cask 'chatgpt'
+cask 'crossover' # gaming
+cask 'figma'
+cask 'firefox'
+cask 'google-chrome'
+cask 'handbrake-app'
+cask 'jordanbaird-ice'
+cask 'kindle-previewer'
+cask 'homebrew/cask-drivers/logitech-g-hub' # gaming
+cask 'microsoft-teams'
+cask 'monitorcontrol'
+cask 'grishka/grishka/neardrop'
+cask 'parsec'
+cask 'postman'
+cask 'rustdesk'
+cask 'slack'
+cask 'superwhisper'
+cask 'tradingview'
+
+mas 'MEGA VPN', id: 6456784858
+mas 'Windows App', id: 1295203466
+```
