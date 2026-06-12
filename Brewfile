@@ -2,18 +2,18 @@ brew 'bat'
 brew 'bitwarden-cli'
 brew 'chezmoi'
 brew 'eza'
+brew 'ffmpeg'
 brew 'fnm'
 brew 'helix'
-# brew 'gh'
+brew 'gh'
 # brew 'kubernetes-cli' # work
 # brew 'magic-wormhole'
-# brew 'pnpm'
+brew 'pnpm'
 # brew 'pyenv' # work
 brew 'ripgrep'
 brew 'starship'
 brew 'yt-dlp'
 # brew 'fd'
-# brew 'ffmpeg'
 # brew 'fx'
 # brew 'rsync'
 
@@ -27,15 +27,16 @@ cask 'android-file-transfer'
 # cask 'android-platform-tools'
 # cask 'amazon-q'
 # cask 'anydesk' # crypto
-# cask 'battle-net' # gaming
+cask 'battle-net' # gaming
 # cask 'bluestacks' # gaming
 # cask 'background-music'
 # cask 'chatgpt'
 cask 'calibre'
+cask 'clearvpn'
 # cask 'chromium' # work
 cask 'comet'
 cask 'discord'
-cask 'docker'
+cask 'docker-desktop'
 # cask 'figma'
 # cask 'firefox'
 cask 'font-jetbrains-mono-nerd-font'
