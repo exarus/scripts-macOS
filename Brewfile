@@ -1,4 +1,5 @@
 tap 'jorgelbg/tap' # gpg
+tap 'StanMarek/tap'
 
 brew 'bat'
 brew 'bitwarden-cli'
@@ -9,6 +10,7 @@ brew 'fnm'
 brew 'helix'
 brew 'gh'
 brew 'gnupg' # gpg
+brew 'StanMarek/tap/ghost-complete', trusted: true
 brew 'pinentry-mac' # gpg
 brew 'jorgelbg/tap/pinentry-touchid' # gpg
 brew 'pnpm'

@@ -11,6 +11,7 @@ bw get item ad501fa8-3b2e-4dce-92dc-b2ad00998c1c | jq -r .notes | gpg --pinentry
 pinentry-touchid -fix
 
 chezmoi init --apply git@github.com:exarus/dotfiles.git
+ghost-complete install
 
 # iterm2
 git clone --depth 1 https://github.com/mbadolato/iTerm2-Color-Schemes.git
