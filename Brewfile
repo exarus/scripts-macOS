@@ -22,6 +22,8 @@ cask 'android-file-transfer'
 cask 'battle-net' # gaming
 cask 'calibre'
 cask 'clearvpn'
+cask 'claude' # AI
+cask 'claude-code' # AI
 cask 'comet'
 cask 'discord'
 cask 'docker-desktop'
