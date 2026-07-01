@@ -20,6 +20,7 @@ brew 'yt-dlp'
 
 cask 'android-file-transfer'
 cask 'battle-net' # gaming
+cask 'blender' # dev
 cask 'calibre'
 cask 'clearvpn'
 cask 'claude' # AI
