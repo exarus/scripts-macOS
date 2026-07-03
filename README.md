@@ -55,6 +55,7 @@ chown -R ${USER}:staff ~/Projects
 
 * Press `Control+Shift+Command+\` to set `iTerm` as default terminal
 * Set `Profile` -> `Profile Names` -> `exarus` as default profile
+* Enable `General` -> `Selection` -> `Applications in terminal may access clipboard`
 
 ## MEGA
 
