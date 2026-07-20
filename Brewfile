@@ -44,6 +44,7 @@ cask 'telegram'
 cask 'ticktick'
 cask 'vlc'
 cask 'whatsapp'
+cask 'zoom'
 
 mas 'Bitwarden', id: 1352778147
 mas 'Unsplash Wallpapers', id: 1284863847
