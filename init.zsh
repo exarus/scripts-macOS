@@ -12,6 +12,7 @@ chmod 600 ~/.ssh/id_ed25519
 
 chezmoi init --apply git@github.com:exarus/dotfiles.git
 ghost-complete install
+pnpm setup
 
 # --- iTerm2 color schemes ---
 git clone --depth 1 https://github.com/mbadolato/iTerm2-Color-Schemes.git
