@@ -67,6 +67,32 @@ chown -R ${USER}:staff ~/Projects
 * Disable `Preferences -> Interface -> Run Steam when my computer starts`
 
 
+# Removed: GPG commit signing (migrated to SSH, 2026-07)
+
+Git commit/tag signing used to run through GnuPG with a Touch ID pinentry:
+`gnupg` + `pinentry-mac` + `jorgelbg/tap/pinentry-touchid` in the Brewfile,
+and `init.zsh` imported a private key from a Bitwarden item
+(`ad501fa8-3b2e-4dce-92dc-b2ad00998c1c`) via
+`gpg --pinentry-mode loopback --import`, then ran `pinentry-touchid -fix`.
+
+Worked fine for commits typed by hand, but `pinentry-touchid` pops a macOS
+GUI Secure Enclave prompt — it hangs forever with no human at the keyboard
+(background jobs, scheduled tasks, agentic/CI commits). Switched to git's
+native SSH-format signing (`gpg.format = ssh`, git 2.34+) instead: the same
+SSH key already restored above (`~/.ssh/id_ed25519`) doubles as the signing
+key, no GnuPG stack needed. `~/.gitconfig` (`gpg.format`, `user.signingkey`,
+`gpg.ssh.allowedSignersFile`) and `~/.ssh/allowed_signers` are managed by
+chezmoi now, so `chezmoi init --apply` in `init.zsh` sets it all up — no
+separate GPG import step required. The key was also registered as a
+"signing key" (in addition to "authentication") on GitHub so commits still
+show as Verified.
+
+If GPG is ever needed again for something other than commits (e.g.
+encrypted email): `brew install gnupg pinentry-mac`, then put
+`pinentry-program /opt/homebrew/bin/pinentry-mac` (or `-touchid`) in
+`~/.gnupg/gpg-agent.conf`. The Bitwarden GPG key item above was left alone
+in the vault, just no longer pulled during bootstrap.
+
 # Possibly interesting additions to Brewfile
 
 ```shell

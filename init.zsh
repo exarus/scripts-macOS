@@ -3,12 +3,10 @@
 brew bundle
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# SSH, GPG
+# SSH (also doubles as the git commit/tag signing key — see README)
 mkdir -p ~/.ssh
 bw get item 521ec851-33f7-481e-a5af-b2df01245606 | jq -r .sshKey.privateKey > ~/.ssh/id_ed25519
 chmod 600 ~/.ssh/id_ed25519
-bw get item ad501fa8-3b2e-4dce-92dc-b2ad00998c1c | jq -r .notes | gpg --pinentry-mode loopback --import
-pinentry-touchid -fix
 
 chezmoi init --apply git@github.com:exarus/dotfiles.git
 ghost-complete install
