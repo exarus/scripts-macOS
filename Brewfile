@@ -28,6 +28,7 @@ cask 'font-jetbrains-mono-nerd-font'
 cask 'iterm2'
 cask 'jetbrains-toolbox' # adds shell scripts
 cask 'keka'
+cask 'libreoffice' # dev
 cask 'losslesscut'
 cask 'megasync'
 cask 'obs'
