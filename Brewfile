@@ -9,6 +9,7 @@ brew 'fnm'
 brew 'helix'
 brew 'gh'
 brew 'StanMarek/tap/ghost-complete', trusted: true
+brew 'libavif'
 brew 'pnpm'
 brew 'ripgrep'
 brew 'starship'
