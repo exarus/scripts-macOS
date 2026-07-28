@@ -158,3 +158,12 @@ encrypted email): `brew install gnupg pinentry-mac`, then put
 in the vault, just no longer pulled during bootstrap.
 
 </details>
+
+<details>
+<summary><strong>CLI commands that modified dot files</strong></summary>
+
+```shell
+pnpm setup
+uv tool update-shell
+```
+</details>

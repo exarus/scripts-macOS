@@ -30,13 +30,13 @@ cask 'iterm2'
 cask 'jetbrains-toolbox' # adds shell scripts
 cask 'keka'
 cask 'libreoffice' # dev
-cask 'losslesscut'
 cask 'megasync'
 cask 'obs'
 cask 'obsidian'
 cask 'qbittorrent'
 cask 'raycast'
 cask 'readdle-spark'
+cask 'rustdesk'
 cask 'steam' # gaming
 cask 'telegram'
 cask 'ticktick'
