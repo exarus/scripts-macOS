@@ -36,6 +36,7 @@ cask 'google-gemini' # AI
 cask 'iterm2'
 cask 'jetbrains-toolbox' # adds shell scripts
 cask 'keka'
+cask 'kindle-previewer'
 cask 'libreoffice' # dev
 cask 'megasync'
 cask 'obs'

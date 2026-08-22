@@ -112,7 +112,6 @@ cask 'firefox'
 cask 'google-chrome'
 cask 'handbrake-app'
 cask 'jordanbaird-ice'
-cask 'kindle-previewer'
 cask 'homebrew/cask-drivers/logitech-g-hub' # gaming
 cask 'microsoft-teams'
 cask 'monitorcontrol'
