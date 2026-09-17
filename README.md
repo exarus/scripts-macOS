@@ -105,22 +105,17 @@ cask 'anydesk'
 cask 'balenaetcher'
 cask 'bluestacks' # gaming
 cask 'background-music'
-cask 'chatgpt'
 cask 'crossover' # gaming
 cask 'figma'
-cask 'firefox'
 cask 'google-chrome'
 cask 'handbrake-app'
 cask 'jordanbaird-ice'
 cask 'homebrew/cask-drivers/logitech-g-hub' # gaming
-cask 'microsoft-teams'
 cask 'monitorcontrol'
 cask 'grishka/grishka/neardrop'
 cask 'parsec'
 cask 'postman'
-cask 'rustdesk'
 cask 'slack'
-cask 'superwhisper'
 cask 'tradingview'
 
 mas 'MEGA VPN', id: 6456784858
