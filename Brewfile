@@ -9,6 +9,7 @@ brew 'gh'
 brew 'fnm'
 brew 'helix'
 brew 'libavif'  # media
+brew 'mistral-vibe' # AI
 brew 'pnpm'
 brew 'openai-whisper'
 brew 'poppler' # pdf
@@ -16,6 +17,7 @@ brew 'ripgrep'
 brew 'StanMarek/tap/ghost-complete', trusted: true
 brew 'starship'
 brew 'tmux' # AI
+brew 'uv' # dev
 brew 'yt-dlp'
 
 cask 'android-file-transfer'
@@ -32,6 +34,7 @@ cask 'codex' # AI
 cask 'comet'
 cask 'discord'
 cask 'docker-desktop'
+cask 'firefox' # dev
 cask 'font-jetbrains-mono-nerd-font'
 cask 'google-gemini' # AI
 cask 'iterm2'
@@ -40,6 +43,7 @@ cask 'keka'
 cask 'kindle-previewer'
 cask 'libreoffice' # dev
 cask 'megasync'
+cask 'microsoft-teams' # work
 cask 'obs'
 cask 'obsidian'
 cask 'qbittorrent'
@@ -47,6 +51,7 @@ cask 'raycast'
 cask 'readdle-spark'
 cask 'rustdesk'
 cask 'steam' # gaming
+cask 'superwhisper' # AI
 cask 'telegram'
 cask 'ticktick'
 cask 'vlc'
