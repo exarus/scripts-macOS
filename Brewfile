@@ -10,6 +10,7 @@ brew 'fnm'
 brew 'helix'
 brew 'libavif'  # media
 brew 'pnpm'
+brew 'openai-whisper'
 brew 'poppler' # pdf
 brew 'ripgrep'
 brew 'StanMarek/tap/ghost-complete', trusted: true
