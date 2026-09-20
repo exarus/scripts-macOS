@@ -14,6 +14,7 @@ brew 'pnpm'
 brew 'openai-whisper'
 brew 'poppler' # pdf
 brew 'ripgrep'
+brew 'rustup' # dev
 brew 'StanMarek/tap/ghost-complete', trusted: true
 brew 'starship'
 brew 'tmux' # AI
