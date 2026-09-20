@@ -159,6 +159,45 @@ mas 'Windows App', id: 1295203466
 </details>
 
 <details>
+<summary><strong>🗄️ History — ghost-complete is a PTY proxy, not a shell plugin (2026-09)</strong></summary>
+
+`ghost-complete` (Brewfile, `StanMarek/tap`) does more than source a script.
+`ghost-complete install` puts a block at the *top* of `~/.zshrc` that sources
+`~/.config/ghost-complete/shell/init.zsh`, which runs `exec ghost-complete`
+whenever `TERM_PROGRAM` names a supported terminal — iTerm2 included. So every
+interactive shell on this machine runs inside a second pty, with the binary
+sitting between the terminal and zsh. That is why `ps` shows dozens of
+`ghost-complete` processes, one per session.
+
+Worth remembering when debugging anything at the terminal-protocol layer: key
+encodings, escape sequences, mouse reporting, bracketed paste. The proxy parses
+input and re-emits it, so what a program receives is not necessarily what the
+terminal sent.
+
+It already cost one debugging session. Arrow keys in application-cursor mode
+(DECCKM, `\e[?1h`) were reaching programs as `ESC [ B` instead of `ESC O B`,
+because the proxy decoded the SS3 and CSI arrow forms to the same internal event
+and could only re-emit the CSI one. From inside the proxy this is
+indistinguishable from the terminal ignoring DECCKM — the terminal's mode state
+and its DECRQM replies are all correct, and only the bytes reaching the program
+are wrong. It was filed against iTerm2 as
+[gnachman/iterm2#12939](https://gitlab.com/gnachman/iterm2/-/work_items/12939);
+iTerm2 was correct the whole time. Fix submitted upstream as
+[StanMarek/ghost-complete#173](https://github.com/StanMarek/ghost-complete/pull/173).
+
+To take the proxy out of the picture while debugging, start a shell that never
+reads `~/.zshrc`:
+
+```zsh
+/bin/zsh -f
+```
+
+Then compare against a normal shell. If the two disagree about bytes, the proxy
+is in the path.
+
+</details>
+
+<details>
 <summary><strong>🗄️ History — GPG commit signing removed (migrated to SSH, 2026-07)</strong></summary>
 
 Git commit/tag signing used to run through GnuPG with a Touch ID pinentry:
