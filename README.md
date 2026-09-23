@@ -7,6 +7,7 @@ fully configured one.
 | --- | --- |
 | [`Brewfile`](./Brewfile) | Every formula, cask, and Mac App Store app to install |
 | [`init.zsh`](./init.zsh) | Bootstrap script — Homebrew, dotfiles, SSH key, apps |
+| [`launchd/`](./launchd) | Scheduled background jobs (plist + script), symlinked into place by `init.zsh` |
 | `README.md` | This guide, including the manual steps that can't be scripted |
 
 ## Bootstrap a fresh Mac
@@ -153,6 +154,57 @@ cask 'tradingview'
 mas 'MEGA VPN', id: 6456784858
 mas 'Windows App', id: 1295203466
 ```
+
+</details>
+
+<details>
+<summary><strong>🗄️ History — weekly sysup moved from ad hoc to `launchd/` (2026-09)</strong></summary>
+
+`sysup` (Oh My Zsh + chezmoi + `brew update`/`upgrade`/`autoremove`/`cleanup`,
+defined in the dotfiles repo's `functions.zsh`) existed but was only ever run
+by hand, so `claude-code@latest` and everything else in the Brewfile could
+still drift for weeks between runs — which is exactly how the stale-`claude`
+bug in the entry below happened.
+
+Added `launchd/sysup.zsh` (sources `~/.zshrc` so `sysup()` is in scope, since
+`launchd` jobs don't start a login shell) and `launchd/com.exarus.sysup.plist`
+(runs it every Monday 9am via `StartCalendarInterval`; only fires while
+logged in and awake — a missed slot runs at next login, it doesn't queue).
+`init.zsh` now symlinks both into `~/.local/share/scheduled-tasks/` and
+`~/Library/LaunchAgents/` and does a `launchctl unload`/`load`, so a fresh Mac
+gets the schedule automatically and any later edit to the files in this repo
+takes effect after the next `launchctl load` — no re-copying needed. Output
+logs to `~/.local/share/scheduled-tasks/sysup.log`.
+
+</details>
+
+<details>
+<summary><strong>🗄️ History — claude-code tracks Anthropic's `latest` release channel (2026-09)</strong></summary>
+
+Hit a stale-version bug where `claude` didn't pick up `AGENTS.md` support —
+the Homebrew cask was several releases behind. Anthropic publishes two
+release channels for the Claude Code binary
+(`downloads.claude.ai/claude-code-releases/stable` vs. `.../latest`), and
+Homebrew ships both as separate cask tokens with `conflicts_with` between
+them: `claude-code` tracks `stable`, `claude-code@latest` tracks `latest`.
+Switched the Brewfile entry from `claude-code` to `claude-code@latest` to get
+new releases as soon as Anthropic cuts them instead of whenever they promote
+to stable.
+
+Checked whether the same applies to the other AI tools in the Brewfile
+(`claude`, `chatgpt`, `codex`, `google-gemini`, `antigravity`,
+`antigravity-cli`, `muse`, `muse-code`, `mistral-vibe`): none of them ship an
+equivalent `@latest`/`@nightly` cask token in `homebrew-cask`. `claude`,
+`chatgpt`, `google-gemini`, `antigravity`, `antigravity-cli`, and `muse` are
+all Homebrew-`auto_updates` apps — they self-update to the actual latest
+release in the background regardless of what version Homebrew last
+installed, so there's no freshness gap to close for them. `muse-code` (Meta's
+CLI coding agent, `dev.meta.ai`) checks a `muse-stable` channel via
+`api.meta.ai`; there's also a `muse-canary` channel, but as of this check it
+resolves to an *older* build than stable, so unlike Anthropic's split it's
+not a faster stream and wasn't worth switching to. `codex` and `mistral-vibe`
+(formula) do not self-update and have no faster channel to opt into; staying
+current on those just means running `brew upgrade` reasonably often.
 
 </details>
 

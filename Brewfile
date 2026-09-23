@@ -30,7 +30,7 @@ cask 'calibre'
 cask 'chatgpt' # AI
 cask 'clearvpn'
 cask 'claude' # AI
-cask 'claude-code' # AI
+cask 'claude-code@latest' # AI
 cask 'codex' # AI
 cask 'comet'
 cask 'discord'

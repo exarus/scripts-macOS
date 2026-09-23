@@ -50,6 +50,15 @@ Mac (per the README, not run unattended end-to-end). Notable behavior:
 - A few steps are inherently interactive (Bitwarden/GitHub login, Keka helper GUI install, Battle.net
   installer) and can't be made non-interactive.
 
+## launchd/
+
+Scheduled background jobs. Each job is a `.plist` + its script, both symlinked (not copied) by
+`init.zsh` into `~/Library/LaunchAgents/` and `~/.local/share/scheduled-tasks/` respectively — the
+symlink means an edit in this repo takes effect after the next `launchctl load`, no re-run of
+`init.zsh` needed. `com.exarus.sysup.plist` runs `sysup` (see dotfiles repo's `functions.zsh`)
+weekly to keep Homebrew — and anything on a fast-moving cask channel like `claude-code@latest` —
+from going stale between manual runs.
+
 ## README.md
 
 Holds what `init.zsh` can't do: manual System Settings/Finder/iTerm/app tweaks, the Brewfile backlog, and a

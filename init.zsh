@@ -48,6 +48,15 @@ chezmoi init --apply git@github.com:exarus/dotfiles.git
 ghost-complete install
 pnpm setup
 
+# --- Scheduled maintenance (launchd) ---
+# Symlinked rather than copied so future edits to launchd/ take effect after
+# the next launchctl load, without re-running init.zsh.
+mkdir -p ~/.local/share/scheduled-tasks ~/Library/LaunchAgents
+ln -sf "$PWD/launchd/sysup.zsh" ~/.local/share/scheduled-tasks/sysup.zsh
+ln -sf "$PWD/launchd/com.exarus.sysup.plist" ~/Library/LaunchAgents/com.exarus.sysup.plist
+launchctl unload ~/Library/LaunchAgents/com.exarus.sysup.plist 2>/dev/null
+launchctl load ~/Library/LaunchAgents/com.exarus.sysup.plist
+
 # --- iTerm2 color schemes ---
 git clone --depth 1 https://github.com/mbadolato/iTerm2-Color-Schemes.git
 ./iTerm2-Color-Schemes/tools/import-scheme.sh 'Catppuccin Latte' 'Catppuccin Frappe' 'Catppuccin Macchiato' 'Catppuccin Mocha' Dracula+ Dracula 'Solarized Dark Patched'
