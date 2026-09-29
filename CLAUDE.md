@@ -37,6 +37,13 @@ There is no lint/test/build step for this repo.
 - Keep the Brewfile and the actual system in sync in the same change: adding a package means both installing
   it (`brew install`/`brew install --cask`) and adding the Brewfile line; removing means both uninstalling and
   deleting the line. Use the `check`/`cleanup` commands above to verify before/after.
+- **Do not add `brew 'mas'` to the Brewfile, and do not treat `mas` as untracked.** The `mas 'Name', id: N`
+  lines are Mac App Store entries, and `brew bundle` installs the `mas` CLI itself whenever it sees them, so
+  `mas` is an implicit dependency of the Brewfile. `brew bundle cleanup` still lists `mas` under "Would
+  uninstall formulae" — that is a known false positive, not drift. Ignore it, and never run
+  `cleanup --force` on the strength of that output, since it would uninstall `mas`. (`mas` is a normal
+  homebrew-core formula; the IDs are App Store app IDs, not a package repo, and installing needs an App Store
+  sign-in.)
 - `README.md` has a "Backlog — possible Brewfile additions" section (a `ruby` fenced block) for packages that
   are candidates but not yet installed — that's a holding area, not a normal Brewfile line.
 
