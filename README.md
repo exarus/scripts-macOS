@@ -184,6 +184,11 @@ Added the `adguard`, `anydesk` and `google-chrome` casks and the `maven` and
 up from this repo gets them. Removed the `comet` cask, so fresh setups no
 longer install it. Chrome is now the default browser in the manual setup step.
 
+`mas` is deliberately not listed: `brew bundle` installs the `mas` CLI itself
+because the Brewfile has `mas` entries (App Store IDs; needs an App Store
+sign-in). `brew bundle cleanup` still reports it as untracked — don't run it
+with `--force`, or it would uninstall `mas`.
+
 </details>
 
 <details>
