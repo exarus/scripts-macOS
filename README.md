@@ -179,20 +179,10 @@ logs to `~/.local/share/scheduled-tasks/sysup.log`.
 <details>
 <summary><strong>🗄️ History — Brewfile reconciled with installed apps (2026-09)</strong></summary>
 
-The Brewfile now includes the AdGuard and Google Chrome casks and the `maven`
-and `openjdk@21` formulae, so a fresh Mac set up from this repo gets them.
-Chrome is the browser used for scripts and is named in the manual browser
-setup step. Homebrew Bundle installs the `mas` CLI when needed for the
-Brewfile's Mac App Store entries, so it is not listed separately. Comet was
-removed from the Brewfile, so fresh setups no longer install it.
-
-</details>
-
-<details>
-<summary><strong>🗄️ History — AnyDesk added to the setup (2026-09)</strong></summary>
-
-AnyDesk is now in the Brewfile, so a fresh Mac set up from this repo gets it
-and the scripted package list matches the resulting system.
+Added the `adguard`, `anydesk` and `google-chrome` casks and the `maven` and
+`openjdk@21` formulae, which were installed but untracked, so a fresh Mac set
+up from this repo gets them. Removed the `comet` cask, so fresh setups no
+longer install it. Chrome is now the default browser in the manual setup step.
 
 </details>
 
@@ -265,8 +255,8 @@ four leave an existing key untouched, and the happy path writes mode `0600`.
 `~/.config/ghost-complete/shell/init.zsh`, which runs `exec ghost-complete`
 whenever `TERM_PROGRAM` names a supported terminal — iTerm2 included. So on a
 machine set up from this repo, every interactive shell runs inside a second
-pty, with the binary sitting between the terminal and zsh. That is why `ps` shows dozens of
-`ghost-complete` processes, one per session.
+pty, with the binary sitting between the terminal and zsh. That is why `ps`
+shows dozens of `ghost-complete` processes, one per session.
 
 Worth remembering when debugging anything at the terminal-protocol layer: key
 encodings, escape sequences, mouse reporting, bracketed paste. The proxy parses

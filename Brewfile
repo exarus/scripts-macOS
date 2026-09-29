@@ -9,9 +9,9 @@ brew 'gh'
 brew 'fnm'
 brew 'helix'
 brew 'libavif'  # media
-brew 'maven'
+brew 'maven' # dev
 brew 'mistral-vibe' # AI
-brew 'openjdk@21'
+brew 'openjdk@21' # dev
 brew 'pnpm'
 brew 'openai-whisper'
 brew 'poppler' # pdf
@@ -23,8 +23,8 @@ brew 'tmux' # AI
 brew 'uv' # dev
 brew 'yt-dlp'
 
-cask 'android-file-transfer'
 cask 'adguard'
+cask 'android-file-transfer'
 cask 'anydesk'
 cask 'antigravity' # AI
 cask 'antigravity-cli' # AI
