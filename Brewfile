@@ -9,7 +9,9 @@ brew 'gh'
 brew 'fnm'
 brew 'helix'
 brew 'libavif'  # media
+brew 'maven'
 brew 'mistral-vibe' # AI
+brew 'openjdk@21'
 brew 'pnpm'
 brew 'openai-whisper'
 brew 'poppler' # pdf
@@ -22,6 +24,8 @@ brew 'uv' # dev
 brew 'yt-dlp'
 
 cask 'android-file-transfer'
+cask 'adguard'
+cask 'anydesk'
 cask 'antigravity' # AI
 cask 'antigravity-cli' # AI
 cask 'battle-net' # gaming
@@ -32,12 +36,12 @@ cask 'clearvpn'
 cask 'claude' # AI
 cask 'claude-code@latest' # AI
 cask 'codex' # AI
-cask 'comet'
 cask 'discord'
 cask 'docker-desktop'
 cask 'firefox' # dev
 cask 'font-jetbrains-mono-nerd-font'
 cask 'google-gemini' # AI
+cask 'google-chrome' # dev
 cask 'iterm2'
 cask 'jetbrains-toolbox' # adds shell scripts
 cask 'keka'

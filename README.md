@@ -62,7 +62,7 @@ fully configured one.
 
 ### Browser
 
-- Set as default browser
+- Set Google Chrome as default browser
 - Sync settings
 
 ### iTerm
@@ -134,13 +134,11 @@ brew 'pyenv'
 brew 'rsync'
 
 cask 'android-platform-tools'
-cask 'anydesk'
 cask 'balenaetcher'
 cask 'bluestacks' # gaming
 cask 'background-music'
 cask 'crossover' # gaming
 cask 'figma'
-cask 'google-chrome'
 cask 'handbrake-app'
 cask 'jordanbaird-ice'
 cask 'homebrew/cask-drivers/logitech-g-hub' # gaming
@@ -175,6 +173,26 @@ logged in and awake — a missed slot runs at next login, it doesn't queue).
 gets the schedule automatically and any later edit to the files in this repo
 takes effect after the next `launchctl load` — no re-copying needed. Output
 logs to `~/.local/share/scheduled-tasks/sysup.log`.
+
+</details>
+
+<details>
+<summary><strong>🗄️ History — Brewfile reconciled with installed apps (2026-09)</strong></summary>
+
+The Brewfile now includes the AdGuard and Google Chrome casks and the `maven`
+and `openjdk@21` formulae, so a fresh Mac set up from this repo gets them.
+Chrome is the browser used for scripts and is named in the manual browser
+setup step. Homebrew Bundle installs the `mas` CLI when needed for the
+Brewfile's Mac App Store entries, so it is not listed separately. Comet was
+removed from the Brewfile, so fresh setups no longer install it.
+
+</details>
+
+<details>
+<summary><strong>🗄️ History — AnyDesk added to the setup (2026-09)</strong></summary>
+
+AnyDesk is now in the Brewfile, so a fresh Mac set up from this repo gets it
+and the scripted package list matches the resulting system.
 
 </details>
 
@@ -245,9 +263,9 @@ four leave an existing key untouched, and the happy path writes mode `0600`.
 `ghost-complete` (Brewfile, `StanMarek/tap`) does more than source a script.
 `ghost-complete install` puts a block at the *top* of `~/.zshrc` that sources
 `~/.config/ghost-complete/shell/init.zsh`, which runs `exec ghost-complete`
-whenever `TERM_PROGRAM` names a supported terminal — iTerm2 included. So every
-interactive shell on this machine runs inside a second pty, with the binary
-sitting between the terminal and zsh. That is why `ps` shows dozens of
+whenever `TERM_PROGRAM` names a supported terminal — iTerm2 included. So on a
+machine set up from this repo, every interactive shell runs inside a second
+pty, with the binary sitting between the terminal and zsh. That is why `ps` shows dozens of
 `ghost-complete` processes, one per session.
 
 Worth remembering when debugging anything at the terminal-protocol layer: key
