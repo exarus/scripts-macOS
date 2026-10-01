@@ -53,6 +53,8 @@ A sequential, largely non-idempotent bootstrap script meant to be stepped throug
 Mac (per the README, not run unattended end-to-end). Notable behavior:
 - Pulls the SSH private key (used for both auth and git commit/tag signing via `gpg.format = ssh`) out of a
   Bitwarden vault item via `bw get item <id> | jq`.
+- Restores the rental-search API keys into `~/.config/rental-search/` from two Bitwarden Secure Notes
+  looked up by name (`restore_rental_secrets`), with the same refuse-to-write checks as the SSH key.
 - Applies dotfiles with `chezmoi init --apply git@github.com:exarus/dotfiles.git`.
 - A few steps are inherently interactive (Bitwarden/GitHub login, Keka helper GUI install, Battle.net
   installer) and can't be made non-interactive.

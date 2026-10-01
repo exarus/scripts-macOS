@@ -44,6 +44,34 @@ restore_ssh_key() {
 }
 restore_ssh_key || print -u2 'SSH key not restored — fix the above before continuing.'
 
+# --- Rental-search API keys (~/MEGA/Projects/Housing - Rental Property Search/scripts) ---
+# Two Bitwarden Secure Notes, looked up by exact name; reuses the session restore_ssh_key unlocked.
+restore_rental_secrets() {
+  local dir=~/.config/rental-search
+  local sa env
+
+  bw unlock --check &>/dev/null || { print -u2 'bitwarden: locked — run restore_ssh_key first'; return 1 }
+
+  bw_note() {
+    bw list items --search "$1" | jq -er --arg n "$1" \
+      '[.[] | select(.name == $n)] | if length == 1 then .[0].notes else error("expected one item named \($n), found \(length)") end'
+  }
+  sa=$(bw_note 'rental-search sheets-sa.json') || { print -u2 'bitwarden: could not read note "rental-search sheets-sa.json"'; return 1 }
+  env=$(bw_note 'rental-search .env') || { print -u2 'bitwarden: could not read note "rental-search .env"'; return 1 }
+
+  # Same rule as the SSH key: never write anything that isn't what we expect.
+  print -r -- "$sa" | jq -e '.type == "service_account" and (.private_key | startswith("-----BEGIN PRIVATE KEY-----"))' &>/dev/null || {
+    print -u2 'bitwarden: sheets note is not a service-account JSON — refusing to write'; return 1
+  }
+  [[ $env == *GOOGLE_MAPS_API_KEY=?* && $env == *ORS_API_KEY=?* ]] || {
+    print -u2 'bitwarden: env note lacks GOOGLE_MAPS_API_KEY / ORS_API_KEY — refusing to write'; return 1
+  }
+
+  (umask 077; mkdir -p "$dir" && print -r -- "$sa" > "$dir/sheets-sa.json" && print -r -- "$env" > "$dir/.env") || return 1
+  print '==> restored ~/.config/rental-search'
+}
+restore_rental_secrets || print -u2 'Rental-search keys not restored — the rental scripts will fail until they are.'
+
 chezmoi init --apply git@github.com:exarus/dotfiles.git
 ghost-complete install
 pnpm setup

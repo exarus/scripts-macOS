@@ -156,6 +156,26 @@ mas 'Windows App', id: 1295203466
 </details>
 
 <details>
+<summary><strong>🗄️ History — init.zsh restores the rental-search API keys (2026-10)</strong></summary>
+
+The rental search in `~/MEGA/Projects/Housing - Rental Property Search` runs
+scripts that need a Google Maps key, an OpenRouteService key and a Google
+Sheets service-account JSON. They live in `~/.config/rental-search/` (never in
+the MEGA folder, which syncs to the cloud and is read by AI agents), and the
+master copy is two Bitwarden Secure Notes: `rental-search sheets-sa.json` and
+`rental-search .env`.
+
+`restore_rental_secrets` runs right after `restore_ssh_key` and reuses its
+unlocked session. It looks the notes up by exact name, and follows the same
+refuse-to-write rule: the JSON must be a service account with a private key,
+and the env note must set both keys. Files are written under `umask 077`.
+Verified against a stubbed `bw`: locked, missing note, wrong JSON and
+incomplete env all leave nothing written; the happy path writes a `0700`
+directory with `0600` files.
+
+</details>
+
+<details>
 <summary><strong>🗄️ History — weekly sysup moved from ad hoc to `launchd/` (2026-09)</strong></summary>
 
 `sysup` (Oh My Zsh + chezmoi + `brew update`/`upgrade`/`autoremove`/`cleanup`,
