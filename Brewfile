@@ -1,4 +1,5 @@
 tap 'StanMarek/tap'
+tap 'thedavidweng/unsigned-tap' # unsigned casks Homebrew disabled; see README history
 
 brew 'bat'
 brew 'bitwarden-cli'
@@ -53,7 +54,7 @@ cask 'muse' # AI
 cask 'muse-code' # AI
 cask 'obs'
 cask 'obsidian'
-cask 'qbittorrent'
+cask 'thedavidweng/unsigned-tap/qbittorrent'
 cask 'raycast'
 cask 'readdle-spark'
 cask 'rustdesk'

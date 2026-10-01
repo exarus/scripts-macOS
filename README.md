@@ -176,6 +176,24 @@ directory with `0600` files.
 </details>
 
 <details>
+<summary><strong>🗄️ History — qbittorrent moved to a third-party tap (2026-09)</strong></summary>
+
+Homebrew disabled the official `qbittorrent` cask on 2026-09-01
+(`fails_gatekeeper_check`: the app isn't Developer ID–signed), so `brew
+upgrade` stopped updating it. It now installs from
+[`thedavidweng/unsigned-tap`](https://github.com/thedavidweng/homebrew-unsigned-tap),
+which carries the same cask plus a postflight that strips
+`com.apple.quarantine`.
+
+Accepted supply-chain risk, knowingly: the tap is new, small, and
+auto-updated nightly by its owner, and the weekly `sysup` job runs `brew
+upgrade` unattended — so its cask code runs here unreviewed. To limit that,
+only the `qbittorrent` cask is `brew trust`ed, not the whole tap (~600
+casks). No other unsigned casks should be added.
+
+</details>
+
+<details>
 <summary><strong>🗄️ History — weekly sysup moved from ad hoc to `launchd/` (2026-09)</strong></summary>
 
 `sysup` (Oh My Zsh + chezmoi + `brew update`/`upgrade`/`autoremove`/`cleanup`,
