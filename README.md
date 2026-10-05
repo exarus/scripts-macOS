@@ -88,6 +88,11 @@ fully configured one.
 
 - **Preferences → Interface** — disable `Run Steam when my computer starts`
 
+### Muse
+
+- Download manually from [muse.ai](https://muse.ai/) and install the DMG —
+  Homebrew no longer ships it (see history), so it is not in the `Brewfile`.
+
 ---
 
 <details>
@@ -152,6 +157,17 @@ cask 'tradingview'
 mas 'MEGA VPN', id: 6456784858
 mas 'Windows App', id: 1295203466
 ```
+
+</details>
+
+<details>
+<summary><strong>🗄️ History — muse cask removed, installed manually (2026-10)</strong></summary>
+
+Homebrew disabled the `muse` cask on 2026-10-01 (it requires a signed
+download URL, which Homebrew doesn't support), so `brew bundle` can no
+longer install or update it. Removed the `cask 'muse'` line from the
+`Brewfile` and uninstalled the Homebrew-managed copy; fresh setups get
+Muse from the [manual download](https://muse.ai/) instead (see above).
 
 </details>
 

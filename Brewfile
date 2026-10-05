@@ -50,7 +50,6 @@ cask 'kindle-previewer'
 cask 'libreoffice' # dev
 cask 'megasync'
 cask 'microsoft-teams' # work
-cask 'muse' # AI
 cask 'muse-code' # AI
 cask 'obs'
 cask 'obsidian'
