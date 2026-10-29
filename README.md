@@ -69,6 +69,9 @@ fully configured one.
 
 - Press `Control+Shift+Command+\` to set iTerm as the default terminal
 - Set profile `exarus` (`Profile → Profile Names`) as default
+- Font: **Maple Mono NF, 16 pt**, installed by the Brewfile. Chezmoi manages it in
+  `~/Library/Application Support/iTerm2/DynamicProfiles/Profiles.json`; edit the
+  source template with `chezmoi edit` and apply that file to persist changes.
 - **General → Selection** — enable `Applications in terminal may access clipboard`
 - **Advanced → Mouse** — set `Scroll wheel sends arrow keys when in alternate screen mode` to `Yes`
 
@@ -381,4 +384,15 @@ in the vault, just no longer pulled during bootstrap.
 pnpm setup
 uv tool update-shell
 ```
+</details>
+
+<details>
+<summary><strong>🗄️ History — iTerm2 switched to Maple Mono NF (2026-10-22)</strong></summary>
+
+Replaced the JetBrains Mono Nerd Font cask with `font-maple-mono-nf`. The
+chezmoi Exarus dynamic profile uses `MapleMono-NF-Regular 16` for both font
+fields, with the separate non-ASCII font disabled. Nerd Font prompt icons and
+ligatures remain supported. Font files must also be visible in Font Book;
+files on disk alone did not make the previous font available to iTerm2.
+
 </details>

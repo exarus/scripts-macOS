@@ -7,17 +7,15 @@ brew 'chezmoi'
 brew 'eza'
 brew 'ffmpeg' # media
 brew 'gh'
-brew 'fnm'
+brew 'fnm' # dev
 brew 'helix'
 brew 'libavif'  # media
 brew 'maven' # dev
-brew 'mistral-vibe' # AI
-brew 'openjdk@21' # dev
-brew 'pnpm'
+brew 'openjdk' # dev
+brew 'pnpm' # dev
 brew 'openai-whisper'
 brew 'poppler' # pdf
 brew 'ripgrep'
-brew 'rustup' # dev
 brew 'StanMarek/tap/ghost-complete', trusted: true
 brew 'starship'
 brew 'tmux' # AI
@@ -27,10 +25,9 @@ brew 'yt-dlp'
 cask 'adguard'
 cask 'android-file-transfer'
 cask 'anydesk'
-cask 'antigravity' # AI
-cask 'antigravity-cli' # AI
 cask 'battle-net' # gaming
-cask 'blender' # dev
+cask 'bitwarden'
+# cask 'blender' # dev
 cask 'calibre'
 cask 'chatgpt' # AI
 cask 'clearvpn'
@@ -38,16 +35,15 @@ cask 'claude' # AI
 cask 'claude-code@latest' # AI
 cask 'codex' # AI
 cask 'discord'
-cask 'docker-desktop'
+cask 'docker-desktop' # dev
 cask 'firefox' # dev
-cask 'font-jetbrains-mono-nerd-font'
+cask 'font-maple-mono-nf'
 cask 'google-gemini' # AI
-cask 'google-chrome' # dev
+cask 'google-chrome'
 cask 'iterm2'
 cask 'jetbrains-toolbox' # adds shell scripts
 cask 'keka'
-cask 'kindle-previewer'
-cask 'libreoffice' # dev
+cask 'libreoffice'
 cask 'megasync'
 cask 'microsoft-teams' # work
 cask 'muse-code' # AI
@@ -58,12 +54,9 @@ cask 'raycast'
 cask 'readdle-spark'
 cask 'rustdesk'
 cask 'steam' # gaming
-cask 'superwhisper' # AI
+# cask 'superwhisper' # AI
 cask 'telegram'
 cask 'ticktick'
 cask 'vlc'
 cask 'whatsapp'
-cask 'zoom'
-
-mas 'Bitwarden', id: 1352778147
-mas 'Unsplash Wallpapers', id: 1284863847
+cask 'zoom' # work
